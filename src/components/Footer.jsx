@@ -58,9 +58,8 @@ export default function Footer({ onOpenResume }) {
             <div>
               <div className="font-hand text-xl text-[var(--pink)] mb-3">socials</div>
               <ul className="space-y-2 opacity-90 font-medium">
-                <li><a href="https://github.com/sahildotexe" target="_blank" rel="noopener noreferrer" className="link-anim inline-block magnetic" data-cursor="hover">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/sksahilali" target="_blank" rel="noopener noreferrer" className="link-anim inline-block magnetic" data-cursor="hover">LinkedIn</a></li>
-                <li><a href="https://twitter.com/sahildotexe" target="_blank" rel="noopener noreferrer" className="link-anim inline-block magnetic" data-cursor="hover">Twitter / X</a></li>
+                <li><a href="https://github.com/SahillAli3031" target="_blank" rel="noopener noreferrer" className="link-anim inline-block magnetic" data-cursor="hover">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/sk-sahil-ali-394107282/" target="_blank" rel="noopener noreferrer" className="link-anim inline-block magnetic" data-cursor="hover">LinkedIn</a></li>
               </ul>
             </div>
           </div>

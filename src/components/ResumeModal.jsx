@@ -33,14 +33,14 @@ export default function ResumeModal({ onClose }) {
                 SK SAHIL ALI &bull; Curriculum Vitae
               </h3>
               <p className="text-xs text-[#5E725F] font-mono">
-                Latest_Resume.pdf &bull; Verified &amp; Shipped
+                Sk_Sahil_Ali.pdf &bull; Verified &amp; Shipped
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <a
-              href="/Latest_Resume.pdf"
+              href="/Sk_Sahil_Ali.pdf"
               download="SK_Sahil_Ali_Resume.pdf"
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-[#1C1B19] text-white hover:bg-[#33312D] shadow-sm transition-all"
             >
@@ -138,7 +138,7 @@ export default function ResumeModal({ onClose }) {
           {/* Right Column: Embedded PDF Viewer (7 cols) */}
           <div className="lg:col-span-7 h-[65vh] lg:h-auto bg-[#EFECE4] flex flex-col">
             <iframe
-              src="/Latest_Resume.pdf#toolbar=0&navpanes=0"
+              src="/Sk_Sahil_Ali.pdf#toolbar=0&navpanes=0"
               title="SK Sahil Ali Resume PDF"
               className="w-full h-full border-none"
             />
@@ -150,7 +150,7 @@ export default function ResumeModal({ onClose }) {
         <div className="px-6 sm:px-8 py-3 border-t border-black/10 flex items-center justify-between bg-[#F8F7F2] text-xs font-mono text-[#8E8980]">
           <span>Authentic Document from Local Workspace</span>
           <a
-            href="/Latest_Resume.pdf"
+            href="/Sk_Sahil_Ali.pdf"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1 text-[#1C1B19] hover:underline"

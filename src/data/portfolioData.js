@@ -8,7 +8,7 @@ export const portfolioData = {
     phone: "+91 62903 02422",
     github: "https://github.com/SahillAli3031",
     linkedin: "https://www.linkedin.com/in/sk-sahil-ali-394107282/",
-    resumeUrl: "/Latest_Resume.pdf",
+    resumeUrl: "/Sk_Sahil_Ali.pdf",
     avatar: "/sahilda.jpeg",
     tagline: "Bridging the serenity of minimalist interfaces with the robustness of distributed systems.",
     summary: "Software Developer specializing in full-stack architecture, high-throughput RESTful & microservice APIs, multi-role security (RBAC), and reactive web & mobile applications. Driven by the Japandi ethos: uncompromising craftsmanship, deliberate simplicity, and resilient engineering."
@@ -215,7 +215,7 @@ export async function middleware(req: NextRequest) {
     languages: [
       { name: "JavaScript", level: 96, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "TypeScript", level: 92, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "Python", level: 88, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "Python", level: 55, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       { name: "Dart", level: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
       { name: "HTML5", level: 98, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
       { name: "CSS3", level: 98, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" }
