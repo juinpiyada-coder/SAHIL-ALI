@@ -4,7 +4,7 @@ export const portfolioData = {
     kanjiName: "佐比留", // Stylized phonetics
     title: "Software Developer & Systems Craftsman",
     location: "Kolkata, India",
-    email: "sahilali6290@gmail.com",
+    email: "sksahil.006297@snuindia.in",
     phone: "+91 62903 02422",
     github: "https://github.com/SahillAli3031",
     linkedin: "https://www.linkedin.com/in/sk-sahil-ali-394107282/",

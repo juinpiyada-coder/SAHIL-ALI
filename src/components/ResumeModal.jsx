@@ -81,8 +81,8 @@ export default function ResumeModal({ onClose }) {
             <div className="space-y-2 text-xs font-mono text-[#58544D]">
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#B8764B]" />
-                <a href="mailto:sahilali6290@gmail.com" className="hover:underline text-[#1C1B19]">
-                  sahilali6290@gmail.com
+                <a href="mailto:sksahil.006297@snuindia.in" className="hover:underline text-[#1C1B19]">
+                  sksahil.006297@snuindia.in
                 </a>
               </div>
               <div className="flex items-center gap-2">
