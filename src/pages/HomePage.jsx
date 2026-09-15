@@ -96,7 +96,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
                 <ul className="space-y-3 text-[15px] font-sans">
                   <li className="flex items-start gap-3">
                     <span className="w-5 h-5 bg-[var(--teal)] rounded-full border-2 border-[var(--ink)] shrink-0 mt-0.5"></span>
-                    <span><strong>Deep Dive Foundation</strong> — Core Architect</span>
+                    <span><strong>Deep Duo Foundation</strong> — Core Architect</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-5 h-5 bg-[var(--mustard)] rounded-full border-2 border-[var(--ink)] shrink-0 mt-0.5"></span>
@@ -405,7 +405,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
                 <div className="font-hand text-2xl text-[var(--mustard)] mb-1">discovery</div>
                 <h3 className="font-display text-xl mb-3">We talk architecture.</h3>
                 <p className="text-sm opacity-80 leading-relaxed font-sans">
-                  Deep dive into requirements, constraints, and long-term goals. We pick the right stack for the job, not just the trendiest one.
+                  Deep Duo into requirements, constraints, and long-term goals. We pick the right stack for the job, not just the trendiest one.
                 </p>
               </div>
             </div>
