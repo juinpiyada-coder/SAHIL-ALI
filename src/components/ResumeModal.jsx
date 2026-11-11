@@ -102,7 +102,7 @@ export default function ResumeModal({ onClose }) {
                 <span>EXPERIENCE (2025 - 2026)</span>
               </div>
               <div className="p-3 rounded-xl bg-white border border-black/5 shadow-2xs">
-                <p className="text-xs font-bold text-[#1C1B19]">Deep Duo Foundation</p>
+                <p className="text-xs font-bold text-[#1C1B19]">DDF PVT.LTD.</p>
                 <p className="text-[11px] text-[#5E725F]">Software Developer</p>
                 <p className="text-[11px] text-[#58544D] mt-1 leading-relaxed">
                   Sonarhaat Marketplace, BoddhIQ Learning Platform, Paper Submission Systems, RBAC security &amp; APIs.

@@ -9,36 +9,36 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
     <div className="bg-[var(--bg)] text-[var(--ink)] font-sans">
       {/* ============== HERO ============== */}
       <section id="top" className="relative min-h-screen pt-28 pb-20 px-6 md:px-10 overflow-hidden flex flex-col justify-center">
-        
+
         {/* Floating doodad background */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-32 left-[8%] w-20 h-20 float-slow">
             <svg viewBox="0 0 80 80" className="w-full h-full doodle">
-              <path d="M40 8 L48 32 L72 32 L52 48 L60 72 L40 56 L20 72 L28 48 L8 32 L32 32 Z" fill="var(--mustard)" stroke="var(--ink)"/>
+              <path d="M40 8 L48 32 L72 32 L52 48 L60 72 L40 56 L20 72 L28 48 L8 32 L32 32 Z" fill="var(--mustard)" stroke="var(--ink)" />
             </svg>
           </div>
           <div className="absolute top-48 right-[10%] w-24 h-24 float-med">
             <svg viewBox="0 0 100 100" className="w-full h-full spin-slow">
-              <circle cx="50" cy="50" r="35" fill="var(--teal)" stroke="var(--ink)" strokeWidth="2.5"/>
-              <circle cx="50" cy="50" r="15" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5"/>
-              <path d="M50 5 L50 15 M50 85 L50 95 M5 50 L15 50 M85 50 L95 50" stroke="var(--ink)" strokeWidth="2.5"/>
+              <circle cx="50" cy="50" r="35" fill="var(--teal)" stroke="var(--ink)" strokeWidth="2.5" />
+              <circle cx="50" cy="50" r="15" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5" />
+              <path d="M50 5 L50 15 M50 85 L50 95 M5 50 L15 50 M85 50 L95 50" stroke="var(--ink)" strokeWidth="2.5" />
             </svg>
           </div>
           <div className="absolute bottom-40 left-[12%] w-16 h-16 wiggle">
             <svg viewBox="0 0 60 60" className="w-full h-full">
-              <path d="M30 5 L30 50 M15 20 L30 5 L45 20" stroke="var(--ink)" strokeWidth="3" fill="none" strokeLinecap="round"/>
-              <circle cx="30" cy="55" r="3" fill="var(--coral)"/>
+              <path d="M30 5 L30 50 M15 20 L30 5 L45 20" stroke="var(--ink)" strokeWidth="3" fill="none" strokeLinecap="round" />
+              <circle cx="30" cy="55" r="3" fill="var(--coral)" />
             </svg>
           </div>
           <div className="absolute top-[55%] right-[15%] drift">
             <svg viewBox="0 0 80 80" className="w-20 h-20">
-              <path d="M10 40 Q40 10, 70 40 T10 40" fill="var(--pink)" stroke="var(--ink)" strokeWidth="2.5"/>
-              <path d="M10 50 Q40 20, 70 50 T10 50" fill="none" stroke="var(--ink)" strokeWidth="2.5"/>
+              <path d="M10 40 Q40 10, 70 40 T10 40" fill="var(--pink)" stroke="var(--ink)" strokeWidth="2.5" />
+              <path d="M10 50 Q40 20, 70 50 T10 50" fill="none" stroke="var(--ink)" strokeWidth="2.5" />
             </svg>
           </div>
           {/* Tape pieces */}
-          <div className="absolute top-24 right-[30%] w-24 h-8 bg-[var(--mustard)] opacity-70 rotate-12 border border-[var(--ink)]" style={{borderStyle: 'dashed'}}></div>
-          <div className="absolute bottom-32 right-[8%] w-28 h-8 bg-[var(--pink)] opacity-60 -rotate-6 border border-[var(--ink)]" style={{borderStyle: 'dashed'}}></div>
+          <div className="absolute top-24 right-[30%] w-24 h-8 bg-[var(--mustard)] opacity-70 rotate-12 border border-[var(--ink)]" style={{ borderStyle: 'dashed' }}></div>
+          <div className="absolute bottom-32 right-[8%] w-28 h-8 bg-[var(--pink)] opacity-60 -rotate-6 border border-[var(--ink)]" style={{ borderStyle: 'dashed' }}></div>
         </div>
 
         <div className="max-w-[1400px] mx-auto relative w-full">
@@ -58,9 +58,9 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               THAT
               <span className="inline-block relative align-middle mx-2 md:mx-4">
                 <svg viewBox="0 0 100 100" className="w-[0.85em] h-[0.85em] inline-block align-middle">
-                  <circle cx="50" cy="50" r="42" fill="var(--mustard)" stroke="var(--ink)" strokeWidth="3"/>
-                  <path d="M30 50 Q50 30, 70 50 Q50 70, 30 50" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2.5"/>
-                  <circle cx="50" cy="50" r="6" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2"/>
+                  <circle cx="50" cy="50" r="42" fill="var(--mustard)" stroke="var(--ink)" strokeWidth="3" />
+                  <path d="M30 50 Q50 30, 70 50 Q50 70, 30 50" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2.5" />
+                  <circle cx="50" cy="50" r="6" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2" />
                 </svg>
               </span>
               <span className="title-stroke">SCALE.</span>
@@ -96,7 +96,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
                 <ul className="space-y-3 text-[15px] font-sans">
                   <li className="flex items-start gap-3">
                     <span className="w-5 h-5 bg-[var(--teal)] rounded-full border-2 border-[var(--ink)] shrink-0 mt-0.5"></span>
-                    <span><strong>Deep Duo Foundation</strong> — Core Architect</span>
+                    <span><strong>DDF PVT.LTD.</strong> — Core Architect</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-5 h-5 bg-[var(--mustard)] rounded-full border-2 border-[var(--ink)] shrink-0 mt-0.5"></span>
@@ -153,7 +153,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
                 </div>
                 {/* Sticker */}
                 <div className="absolute -top-6 -right-6 w-24 h-24 bg-[var(--coral)] rounded-full border-[2.5px] border-[var(--ink)] flex items-center justify-center text-center font-display text-[var(--paper)] text-xs leading-tight wiggle">
-                  CLASS<br/>OF '25
+                  CLASS<br />OF '25
                 </div>
                 {/* Tape */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-7 bg-[var(--teal)] opacity-80 border border-[var(--ink)] rotate-3"></div>
@@ -163,7 +163,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
             <div className="md:col-span-7 reveal">
               <div className="font-hand text-2xl text-[var(--coral)] mb-3">— hello there</div>
               <h2 className="section-title font-display mb-6">
-                I write code that<br/>
+                I write code that<br />
                 <span className="text-[var(--coral)]">refuses</span> to break.
               </h2>
               <div className="space-y-5 text-lg leading-relaxed max-w-xl font-sans">
@@ -172,7 +172,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
                 </p>
                 <p>
                   I work differently. I dig into the <strong>complex, messy logic</strong> of your application,
-                  then build an architecture around it — scalable databases, secure APIs, and interfaces that feel instant. 
+                  then build an architecture around it — scalable databases, secure APIs, and interfaces that feel instant.
                   The kind of system people <em>trust</em> without thinking about it.
                 </p>
               </div>
@@ -200,14 +200,14 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
       {/* ============== SERVICES ============== */}
       <section className="relative py-28 px-6 md:px-10 bg-[var(--bg-deep)] border-y-2 border-[var(--ink)]">
         {/* Decorative top edge */}
-        <div className="absolute top-0 left-0 right-0 h-2 bg-[var(--ink)]" style={{maskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5 L 100 10 L 0 10 Z' fill='black'/%3E%3C/svg%3E\")", maskSize: "100% 100%"}}></div>
+        <div className="absolute top-0 left-0 right-0 h-2 bg-[var(--ink)]" style={{ maskImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5 L 100 10 L 0 10 Z' fill='black'/%3E%3C/svg%3E\")", maskSize: "100% 100%" }}></div>
 
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal">
             <div>
               <div className="font-hand text-2xl text-[var(--coral)] mb-2">— what I do</div>
               <h2 className="section-title font-display">
-                SERVICES<br/>
+                SERVICES<br />
                 <span className="title-stroke">(the goods)</span>
               </h2>
             </div>
@@ -222,9 +222,9 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               <div className="absolute top-4 right-4 font-hand text-xl opacity-70">01</div>
               <div className="w-16 h-16 mb-6">
                 <svg viewBox="0 0 64 64" className="w-full h-full">
-                  <circle cx="32" cy="32" r="26" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5"/>
-                  <circle cx="32" cy="32" r="14" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2.5"/>
-                  <circle cx="32" cy="32" r="5" fill="var(--paper)"/>
+                  <circle cx="32" cy="32" r="26" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5" />
+                  <circle cx="32" cy="32" r="14" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2.5" />
+                  <circle cx="32" cy="32" r="5" fill="var(--paper)" />
                 </svg>
               </div>
               <h3 className="font-display text-2xl mb-3">Frontend Architecture</h3>
@@ -242,9 +242,9 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               <div className="absolute top-4 right-4 font-hand text-xl opacity-70">02</div>
               <div className="w-16 h-16 mb-6">
                 <svg viewBox="0 0 64 64" className="w-full h-full">
-                  <path d="M14 14 L50 14 L50 50 L14 50 Z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5"/>
-                  <path d="M22 26 L42 26 M22 32 L42 32 M22 38 L34 38" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round"/>
-                  <circle cx="48" cy="20" r="6" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2"/>
+                  <path d="M14 14 L50 14 L50 50 L14 50 Z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5" />
+                  <path d="M22 26 L42 26 M22 32 L42 32 M22 38 L34 38" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round" />
+                  <circle cx="48" cy="20" r="6" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2" />
                 </svg>
               </div>
               <h3 className="font-display text-2xl mb-3">Backend Engineering</h3>
@@ -262,10 +262,10 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               <div className="absolute top-4 right-4 font-hand text-xl opacity-80">03</div>
               <div className="w-16 h-16 mb-6">
                 <svg viewBox="0 0 64 64" className="w-full h-full">
-                  <rect x="10" y="20" width="44" height="28" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5" rx="3"/>
-                  <circle cx="22" cy="34" r="6" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2"/>
-                  <path d="M32 28 L38 34 L44 28 L44 40 L32 40 Z" fill="var(--mustard)" stroke="var(--ink)" strokeWidth="2"/>
-                  <rect x="26" y="16" width="12" height="6" fill="var(--ink)"/>
+                  <rect x="10" y="20" width="44" height="28" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5" rx="3" />
+                  <circle cx="22" cy="34" r="6" fill="var(--coral)" stroke="var(--ink)" strokeWidth="2" />
+                  <path d="M32 28 L38 34 L44 28 L44 40 L32 40 Z" fill="var(--mustard)" stroke="var(--ink)" strokeWidth="2" />
+                  <rect x="26" y="16" width="12" height="6" fill="var(--ink)" />
                 </svg>
               </div>
               <h3 className="font-display text-2xl mb-3">Database Design</h3>
@@ -283,8 +283,8 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               <div className="absolute top-4 right-4 font-hand text-xl opacity-70">04</div>
               <div className="w-16 h-16 mb-6">
                 <svg viewBox="0 0 64 64" className="w-full h-full">
-                  <path d="M16 14 L48 14 L48 50 L32 42 L16 50 Z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5"/>
-                  <path d="M24 24 L40 24 M24 30 L40 30 M24 36 L34 36" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M16 14 L48 14 L48 50 L32 42 L16 50 Z" fill="var(--paper)" stroke="var(--ink)" strokeWidth="2.5" />
+                  <path d="M24 24 L40 24 M24 30 L40 30 M24 36 L34 36" stroke="var(--ink)" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
               <h3 className="font-display text-2xl mb-3">UI/UX Craftsmanship</h3>
@@ -307,15 +307,15 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
             <div>
               <div className="font-hand text-2xl text-[var(--coral)] mb-2">— selected work</div>
               <h2 className="section-title font-display">
-                SYSTEMS<br/>
-                I'VE HELPED<br/>
+                SYSTEMS<br />
+                I'VE HELPED<br />
                 <span className="text-[var(--teal)]">BUILD.</span>
               </h2>
             </div>
           </div>
 
           <div className="grid md:grid-cols-12 gap-6" id="workGrid">
-            
+
             {projects.slice(0, 4).map((proj, idx) => {
               // Alternate sizes for the sketch grid look
               const isLarge = idx === 0;
@@ -369,10 +369,10 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
         {/* Bg doodles */}
         <div className="absolute inset-0 pointer-events-none opacity-20">
           <svg className="absolute top-20 right-10 w-32 h-32 spin-slow" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--mustard)" strokeWidth="2" strokeDasharray="6 6"/>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="var(--mustard)" strokeWidth="2" strokeDasharray="6 6" />
           </svg>
           <svg className="absolute bottom-20 left-10 w-24 h-24 float-slow" viewBox="0 0 100 100">
-            <path d="M20 50 L80 50 M50 20 L50 80" stroke="var(--coral)" strokeWidth="3" strokeLinecap="round"/>
+            <path d="M20 50 L80 50 M50 20 L50 80" stroke="var(--coral)" strokeWidth="3" strokeLinecap="round" />
           </svg>
         </div>
 
@@ -381,7 +381,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
             <div>
               <div className="font-hand text-2xl text-[var(--mustard)] mb-2">— how we'll work</div>
               <h2 className="section-title font-display">
-                THE PROCESS,<br/>
+                THE PROCESS,<br />
                 <span className="text-[var(--coral)]">STICKER-FIED.</span>
               </h2>
             </div>
@@ -392,10 +392,10 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
 
           {/* Process steps */}
           <div className="grid md:grid-cols-4 gap-5 relative reveal-stagger">
-            
+
             {/* Connecting path */}
             <svg className="hidden md:block absolute top-12 left-0 right-0 h-2 path-draw" viewBox="0 0 1000 10" preserveAspectRatio="none">
-              <path d="M0 5 L1000 5" stroke="var(--mustard)" strokeWidth="2" strokeDasharray="8 8" fill="none"/>
+              <path d="M0 5 L1000 5" stroke="var(--mustard)" strokeWidth="2" strokeDasharray="8 8" fill="none" />
             </svg>
 
             {/* Step 1 */}
@@ -405,7 +405,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
                 <div className="font-hand text-2xl text-[var(--mustard)] mb-1">discovery</div>
                 <h3 className="font-display text-xl mb-3">We talk architecture.</h3>
                 <p className="text-sm opacity-80 leading-relaxed font-sans">
-                  Deep Duo into requirements, constraints, and long-term goals. We pick the right stack for the job, not just the trendiest one.
+                  DDF into requirements, constraints, and long-term goals. We pick the right stack for the job, not just the trendiest one.
                 </p>
               </div>
             </div>
@@ -456,13 +456,13 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
           <div className="text-center mb-16 reveal">
             <div className="font-hand text-2xl text-[var(--coral)] mb-2">— when i'm not coding</div>
             <h2 className="section-title font-display">
-              THE STUFF THAT<br/>
+              THE STUFF THAT<br />
               <span className="title-stroke">FUELS</span> THE WORK
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
-            <div className="sticky-note sketch-border p-6 bg-[var(--mustard)]" style={{transform: 'rotate(-2deg)'}}>
+            <div className="sticky-note sketch-border p-6 bg-[var(--mustard)]" style={{ transform: 'rotate(-2deg)' }}>
               <div className="font-hand text-2xl text-[var(--coral)] mb-3">no. 01</div>
               <h3 className="font-display text-2xl mb-3">3D Prototyping</h3>
               <p className="text-sm leading-relaxed mb-4 font-sans">
@@ -470,7 +470,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               </p>
             </div>
 
-            <div className="sticky-note sketch-border p-6 bg-[var(--coral)] text-[var(--paper)]" style={{transform: 'rotate(1.5deg)'}}>
+            <div className="sticky-note sketch-border p-6 bg-[var(--coral)] text-[var(--paper)]" style={{ transform: 'rotate(1.5deg)' }}>
               <div className="font-hand text-2xl text-[var(--mustard)] mb-3">no. 02</div>
               <h3 className="font-display text-2xl mb-3">Open Source</h3>
               <p className="text-sm leading-relaxed mb-4 opacity-95 font-sans">
@@ -478,7 +478,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               </p>
             </div>
 
-            <div className="sticky-note sketch-border p-6 bg-[var(--teal)] text-[var(--paper)]" style={{transform: 'rotate(-1deg)'}}>
+            <div className="sticky-note sketch-border p-6 bg-[var(--teal)] text-[var(--paper)]" style={{ transform: 'rotate(-1deg)' }}>
               <div className="font-hand text-2xl text-[var(--mustard)] mb-3">no. 03</div>
               <h3 className="font-display text-2xl mb-3">Hackathons</h3>
               <p className="text-sm leading-relaxed mb-4 opacity-95 font-sans">
@@ -486,7 +486,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               </p>
             </div>
 
-            <div className="sticky-note sketch-border p-6 bg-[var(--pink)] text-[var(--ink)]" style={{transform: 'rotate(2deg)'}}>
+            <div className="sticky-note sketch-border p-6 bg-[var(--pink)] text-[var(--ink)]" style={{ transform: 'rotate(2deg)' }}>
               <div className="font-hand text-2xl text-[var(--coral)] mb-3">no. 04</div>
               <h3 className="font-display text-2xl mb-3">Tech Meetups</h3>
               <p className="text-sm leading-relaxed mb-4 font-sans">

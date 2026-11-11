@@ -120,7 +120,7 @@ export default function SkillsMotionFlow() {
       />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
@@ -148,11 +148,10 @@ export default function SkillsMotionFlow() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`p-4 sm:p-5 rounded-2xl transition-all duration-300 text-left flex items-center justify-between border ${
-                  isActive
+                className={`p-4 sm:p-5 rounded-2xl transition-all duration-300 text-left flex items-center justify-between border ${isActive
                     ? 'bg-white text-[#1C1B19] border-[#B8764B]/40 shadow-lg scale-[1.02]'
                     : 'bg-white/50 text-[#58544D] hover:bg-white hover:text-[#1C1B19] border-black/5'
-                }`}
+                  }`}
               >
                 <div className="flex items-center gap-3">
                   <div className={`p-2 rounded-xl ${isActive ? 'bg-[#F4ECE6] text-[#B8764B]' : 'bg-[#F6F4EE] text-[#8E8980]'}`}>
@@ -211,7 +210,7 @@ export default function SkillsMotionFlow() {
               {/* Status footer inside card */}
               <div className="mt-4 pt-3 border-t border-black/5 flex items-center justify-between text-[10px] font-mono text-[#8E8980]">
                 <span>PRODUCTION READY</span>
-                <span className="text-[#5E725F] font-bold">VERIFIED &bull; DEEP DUO</span>
+                <span className="text-[#5E725F] font-bold">VERIFIED &bull; DDF</span>
               </div>
             </div>
           ))}

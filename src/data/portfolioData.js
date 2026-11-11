@@ -45,7 +45,7 @@ export const portfolioData = {
   experience: [
     {
       role: "Software Developer",
-      company: "Deep Duo Foundation",
+      company: "DDF PVT.LTD.",
       location: "Kolkata, India",
       period: "2025 – 2026",
       type: "Full-time Engineering",

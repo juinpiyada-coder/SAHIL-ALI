@@ -77,7 +77,7 @@ export default function HeroSection({ onOpenResume, onOpenProject }) {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B8764B]"></span>
             </span>
             <span className="text-xs font-semibold tracking-wider text-[#B8764B] uppercase font-sans-clean">
-              Software Developer &bull; Deep Duo Foundation
+              Software Developer &bull; DDF PVT.LTD.
             </span>
           </div>
 

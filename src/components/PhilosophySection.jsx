@@ -120,7 +120,7 @@ export default function PhilosophySection() {
                 Building high-throughput digital ecosystems from first principles.
               </h3>
               <p className="text-sm sm:text-base text-[#58544D] leading-relaxed font-sans-clean">
-                During my tenure at <strong className="text-[#1C1B19]">Deep Duo Foundation</strong> and through academic innovation at <strong className="text-[#1C1B19]">Sister Nivedita University</strong>, I have engineered multi-role marketplaces (Sonarhaat), learning platforms (BoddhIQ), and cloud CMS architectures from zero to production.
+                During my tenure at <strong className="text-[#1C1B19]">DDF PVT.LTD.</strong> and through academic innovation at <strong className="text-[#1C1B19]">Sister Nivedita University</strong>, I have engineered multi-role marketplaces (Sonarhaat), learning platforms (BoddhIQ), and cloud CMS architectures from zero to production.
               </p>
               <p className="text-sm sm:text-base text-[#58544D] leading-relaxed font-sans-clean">
                 My approach prioritizes type-safety, clean dependency graphs, granular security access control (RBAC), and smooth, fluid UI micro-interactions that leave users feeling effortless mastery.
