@@ -39,7 +39,7 @@ export default function Footer({ onOpenResume }) {
               <Link to="/contact" className="btn-primary magnetic" style={{background: 'var(--coral)', borderColor: 'var(--coral)'}} data-cursor="hover">
                 <span>Start a project</span>
               </Link>
-              <button onClick={onOpenResume} className="btn-ghost text-[var(--paper)] border-[var(--paper)] magnetic" data-cursor="hover">
+              <button onClick={onOpenResume} className="btn-ghost text-[var(--paper)] border-[var(--paper)] btn-read-resume magnetic" data-cursor="hover">
                 <span>Read Resume</span>
               </button>
             </div>

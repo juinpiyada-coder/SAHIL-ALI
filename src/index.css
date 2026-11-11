@@ -188,6 +188,19 @@ body {
   transform: translate(-2px,-2px);
   box-shadow: 6px 6px 0 var(--coral);
 }
+.btn-read-resume {
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--paper);
+  border: 2.5px solid var(--paper);
+}
+.btn-read-resume:hover {
+  background: rgba(255, 255, 255, 0.20);
+  color: var(--paper);
+}
+.btn-read-resume:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 2px;
+}
 
 /* Tags */
 .tag {
