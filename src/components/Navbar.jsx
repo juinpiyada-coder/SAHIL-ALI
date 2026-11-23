@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { FileText } from 'lucide-react';
 
 export default function Navbar({ onOpenResume }) {
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +43,7 @@ export default function Navbar({ onOpenResume }) {
         {/* Right Action */}
         <button onClick={onOpenResume} className="btn-primary text-sm magnetic hidden sm:inline-flex" data-cursor="hover">
           <span>CV / Resume</span>
-          <i className="fas fa-file-alt text-xs"></i>
+          <FileText className="w-3.5 h-3.5 ml-1" />
         </button>
 
       </div>

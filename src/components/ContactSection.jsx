@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
+import { Mail, MapPin, Check, Send } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from './Icons';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -42,7 +44,7 @@ export default function ContactSection() {
         <div className="sketch-border-thick bg-[var(--mustard)] p-6 magnetic" data-cursor="hover">
           <div className="flex justify-between items-start mb-4">
             <div className="w-12 h-12 bg-[var(--paper)] rounded-full border-2 border-[var(--ink)] flex items-center justify-center">
-              <i className="fas fa-envelope text-xl text-[var(--ink)]"></i>
+              <Mail className="w-6 h-6 text-[var(--ink)]" />
             </div>
             <button
               onClick={handleCopyEmail}
@@ -64,7 +66,7 @@ export default function ContactSection() {
         {/* Location / Meta */}
         <div className="sketch-border bg-[var(--teal)] text-[var(--paper)] p-6 magnetic" data-cursor="hover">
           <div className="w-12 h-12 bg-[var(--paper)] rounded-full border-2 border-[var(--ink)] flex items-center justify-center mb-4">
-            <i className="fas fa-map-marker-alt text-xl text-[var(--teal)]"></i>
+            <MapPin className="w-6 h-6 text-[var(--teal)]" />
           </div>
           <div className="font-hand text-xl text-[var(--mustard)] mb-1">base of operations</div>
           <div className="font-display text-xl mb-2">{portfolioData.personal.location}</div>
@@ -80,7 +82,7 @@ export default function ContactSection() {
             className="sketch-border bg-[var(--paper)] p-4 text-center magnetic group hover:bg-[var(--ink)] hover:text-[var(--paper)] transition-all"
             data-cursor="hover"
           >
-            <i className="fab fa-github text-3xl mb-2 group-hover:-translate-y-1 transition-transform"></i>
+            <GithubIcon className="w-8 h-8 mx-auto mb-2 group-hover:-translate-y-1 transition-transform" />
             <div className="font-display text-sm">GitHub</div>
           </a>
           <a
@@ -90,7 +92,7 @@ export default function ContactSection() {
             className="sketch-border bg-[var(--paper)] p-4 text-center magnetic group hover:bg-[#0077B5] hover:text-[var(--paper)] transition-all"
             data-cursor="hover"
           >
-            <i className="fab fa-linkedin text-3xl mb-2 group-hover:-translate-y-1 transition-transform"></i>
+            <LinkedinIcon className="w-8 h-8 mx-auto mb-2 group-hover:-translate-y-1 transition-transform" />
             <div className="font-display text-sm">LinkedIn</div>
           </a>
         </div>
@@ -104,7 +106,7 @@ export default function ContactSection() {
           {submitted ? (
             <div className="h-[400px] flex flex-col items-center justify-center text-center space-y-4 reveal in">
               <div className="w-20 h-20 bg-[var(--teal)] rounded-full border-4 border-[var(--ink)] flex items-center justify-center wiggle">
-                <i className="fas fa-check text-4xl text-[var(--paper)]"></i>
+                <Check className="w-10 h-10 text-[var(--paper)]" />
               </div>
               <h4 className="font-display text-2xl">Message Sent!</h4>
               <p className="font-sans text-[var(--ink-soft)] max-w-sm">
@@ -171,7 +173,7 @@ export default function ContactSection() {
                 data-cursor="hover"
               >
                 <span>Send Message</span>
-                <i className="fas fa-paper-plane text-sm ml-2"></i>
+                <Send className="w-4 h-4 ml-2" />
               </button>
             </form>
           )}

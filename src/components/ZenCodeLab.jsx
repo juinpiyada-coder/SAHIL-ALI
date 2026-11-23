@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Play } from 'lucide-react';
 
 export default function ZenCodeLab() {
   const [activeSnippetIndex, setActiveSnippetIndex] = useState(0);
@@ -174,7 +175,8 @@ export async function middleware(req: NextRequest) {
           <div className="p-4 border-t-2 border-dashed border-[var(--ink-soft)] bg-[#111]">
             {!simulatedRun ? (
               <button onClick={handleRunSimulation} className="btn-primary py-2 px-4 text-sm magnetic" style={{background: 'var(--teal)', borderColor: 'var(--teal)'}} data-cursor="hover">
-                <i className="fas fa-play mr-2"></i> Run Simulation
+                <Play className="w-3.5 h-3.5 mr-2" />
+                <span>Run Simulation</span>
               </button>
             ) : (
               <div className="font-mono text-xs text-[var(--teal)] whitespace-pre-wrap">

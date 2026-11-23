@@ -1,23 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
-import ProjectModal from './components/ProjectModal';
-import ResumeModal from './components/ResumeModal';
 
-// Multi-Page Views
-import HomePage from './pages/HomePage';
-import ProjectsPage from './pages/ProjectsPage';
-import ExperiencePage from './pages/ExperiencePage';
-import SkillsPage from './pages/SkillsPage';
-import CodeLabPage from './pages/CodeLabPage';
-import ContactPage from './pages/ContactPage';
+// Lazy-load page components
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
+const ExperiencePage = lazy(() => import('./pages/ExperiencePage'));
+const SkillsPage = lazy(() => import('./pages/SkillsPage'));
+const CodeLabPage = lazy(() => import('./pages/CodeLabPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+
+// Lazy-load heavy modals
+const ProjectModal = lazy(() => import('./components/ProjectModal'));
+const ResumeModal = lazy(() => import('./components/ResumeModal'));
+
+// Loading fallback component
+function PageLoader() {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-8 h-8 border-3 border-[var(--coral)] border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+        <p className="font-hand text-xl text-[var(--coral)]">Loading...</p>
+      </div>
+    </div>
+  );
+}
+
+function ModalLoader() {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md">
+      <div className="w-10 h-10 border-3 border-[var(--coral)] border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [pathname]);
   return null;
 }
@@ -38,18 +60,20 @@ export default function App() {
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
-    // Since this runs once, we observe initially.
-    // In a React SPA, it's better to observe elements via refs or component-level effects,
-    // but a global timeout to catch newly mounted nodes is a quick patch for this design.
     const observeNodes = () => {
       document.querySelectorAll('.reveal, .reveal-stagger, .path-draw').forEach(el => observer.observe(el));
     };
-    
-    observeNodes();
-    // A simple interval to re-observe if DOM changes (or call this on route change)
-    const interval = setInterval(observeNodes, 1000);
 
-    return () => clearInterval(interval);
+    observeNodes();
+    // Observe on route change via mutation observer instead of interval
+    const mutationObserver = new MutationObserver(() => {
+      observeNodes();
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      mutationObserver.disconnect();
+    };
   }, []);
 
   return (
@@ -57,7 +81,6 @@ export default function App() {
       <ScrollToTop />
       {/* Background is handled by index.css body { background: var(--bg); } */}
       <div className="min-h-screen flex flex-col justify-between">
-        
         {/* Subtle Grain Texture from the new theme */}
         <div className="grain" />
 
@@ -73,42 +96,58 @@ export default function App() {
             <Route
               path="/"
               element={
-                <HomePage
-                  onOpenResume={() => setResumeModalOpen(true)}
-                  onSelectProject={(proj) => setSelectedProject(proj)}
-                />
+                <Suspense fallback={<PageLoader />}>
+                  <HomePage
+                    onOpenResume={() => setResumeModalOpen(true)}
+                    onSelectProject={(proj) => setSelectedProject(proj)}
+                  />
+                </Suspense>
               }
             />
             <Route
               path="/projects"
               element={
-                <ProjectsPage
-                  onSelectProject={(proj) => setSelectedProject(proj)}
-                />
+                <Suspense fallback={<PageLoader />}>
+                  <ProjectsPage
+                    onSelectProject={(proj) => setSelectedProject(proj)}
+                  />
+                </Suspense>
               }
             />
             <Route
               path="/experience"
               element={
-                <ExperiencePage
-                  onOpenResume={() => setResumeModalOpen(true)}
-                />
+                <Suspense fallback={<PageLoader />}>
+                  <ExperiencePage
+                    onOpenResume={() => setResumeModalOpen(true)}
+                  />
+                </Suspense>
               }
             />
             <Route
               path="/skills"
-              element={<SkillsPage />}
+              element={
+                <Suspense fallback={<PageLoader />}>
+                  <SkillsPage />
+                </Suspense>
+              }
             />
             <Route
               path="/codelab"
-              element={<CodeLabPage />}
+              element={
+                <Suspense fallback={<PageLoader />}>
+                  <CodeLabPage />
+                </Suspense>
+              }
             />
             <Route
               path="/contact"
               element={
-                <ContactPage
-                  onOpenResume={() => setResumeModalOpen(true)}
-                />
+                <Suspense fallback={<PageLoader />}>
+                  <ContactPage
+                    onOpenResume={() => setResumeModalOpen(true)}
+                  />
+                </Suspense>
               }
             />
           </Routes>
@@ -117,16 +156,20 @@ export default function App() {
         {/* Persistent Footer */}
         <Footer onOpenResume={() => setResumeModalOpen(true)} />
 
-        {/* Global Modals */}
+        {/* Global Modals - Lazy loaded */}
         {selectedProject && (
-          <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
+          <Suspense fallback={<ModalLoader />}>
+            <ProjectModal
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
+          </Suspense>
         )}
 
         {resumeModalOpen && (
-          <ResumeModal onClose={() => setResumeModalOpen(false)} />
+          <Suspense fallback={<ModalLoader />}>
+            <ResumeModal onClose={() => setResumeModalOpen(false)} />
+          </Suspense>
         )}
 
       </div>

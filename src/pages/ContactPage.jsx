@@ -1,6 +1,7 @@
 import React from 'react';
 import ContactSection from '../components/ContactSection';
 import { portfolioData } from '../data/portfolioData';
+import { FileText } from 'lucide-react';
 
 export default function ContactPage({ onOpenResume }) {
   return (
@@ -15,7 +16,8 @@ export default function ContactPage({ onOpenResume }) {
             Have an exciting role, software project, or architectural challenge? Send a message or download Sahil's verified curriculum vitae.
           </p>
           <button onClick={onOpenResume} className="btn-primary magnetic" style={{background: 'var(--coral)', borderColor: 'var(--coral)'}} data-cursor="hover">
-            <i className="fas fa-file-pdf mr-2"></i> Open Verified CV PDF
+            <FileText className="w-4 h-4 mr-2" />
+            Open Verified CV PDF
           </button>
         </div>
 

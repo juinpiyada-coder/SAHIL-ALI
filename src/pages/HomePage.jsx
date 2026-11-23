@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolioData';
+import { ArrowRight } from 'lucide-react';
 
 export default function HomePage({ onOpenResume, onSelectProject }) {
   const { personal, projects } = portfolioData;
@@ -77,7 +78,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               <div className="flex flex-wrap gap-4 mt-8">
                 <Link to="/projects" className="btn-primary magnetic" data-cursor="hover">
                   <span>See selected work</span>
-                  <i className="fas fa-arrow-right text-xs"></i>
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a href="#process" className="btn-ghost magnetic" data-cursor="hover">
                   <span>How we'll work</span>
@@ -146,7 +147,16 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               <div className="relative inline-block">
                 <div className="sketch-border-thick bg-[var(--paper)] p-4 pb-16 rotate-[-3deg] transition-transform duration-500 hover:rotate-0">
                   <div className="w-full aspect-[4/5] bg-[var(--cream)] overflow-hidden relative">
-                    <img src={personal.avatar} alt={personal.name} className="w-full h-full object-cover grayscale" />
+                    <picture>
+                      <source srcSet="/sahilda.webp" type="image/webp" />
+                      <img
+                        src={personal.avatar}
+                        alt={personal.name}
+                        className="w-full h-full object-cover grayscale"
+                        fetchPriority="high"
+                        decoding="async"
+                      />
+                    </picture>
                     <div className="absolute inset-0 bg-[var(--mustard)] mix-blend-multiply opacity-30"></div>
                   </div>
                   <div className="absolute bottom-3 left-0 right-0 text-center font-hand text-2xl text-[var(--ink)]">that's me, hi ✦</div>
@@ -358,7 +368,7 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
           <div className="text-center mt-12 reveal">
             <Link to="/projects" className="btn-ghost magnetic" data-cursor="hover">
               <span>See the full archive</span>
-              <i className="fas fa-arrow-right text-xs"></i>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

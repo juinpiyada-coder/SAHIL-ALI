@@ -64,7 +64,13 @@ export default function SkillsPage() {
                   <div className="w-12 h-12 shrink-0 bg-[var(--cream)] rounded-full border-2 border-[var(--ink)] flex items-center justify-center p-2">
                     {item.icon && (
                       item.icon.startsWith('http') ? (
-                        <img src={item.icon} alt={item.name} className="w-full h-full object-contain filter grayscale contrast-150" />
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          className="w-full h-full object-contain filter grayscale contrast-150"
+                          loading="lazy"
+                          decoding="async"
+                        />
                       ) : (
                         <span className="text-2xl">{item.icon}</span>
                       )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
+import { FileText, MapPin, CheckCircle, Star } from 'lucide-react';
 
 export default function ExperiencePage({ onOpenResume }) {
   const { experience, education, honors } = portfolioData;
@@ -26,7 +27,8 @@ export default function ExperiencePage({ onOpenResume }) {
             <div className="flex items-center justify-between mb-6 border-b-2 border-[var(--ink)] pb-4 reveal">
               <h2 className="font-display text-3xl">Professional</h2>
               <button onClick={onOpenResume} className="magnetic tag" data-cursor="hover">
-                <i className="fas fa-file-pdf mr-2"></i> Get PDF
+                <FileText className="w-3.5 h-3.5 mr-2" />
+                Get PDF
               </button>
             </div>
 
@@ -42,7 +44,7 @@ export default function ExperiencePage({ onOpenResume }) {
                     <div className="text-right">
                       <span className="tag mb-2 inline-block bg-[var(--mustard)]">{exp.type}</span>
                       <div className="text-xs font-bold font-sans opacity-70">
-                        <i className="fas fa-map-marker-alt mr-1 text-[var(--coral)]"></i>
+                        <MapPin className="w-3.5 h-3.5 inline mr-1 text-[var(--coral)]" />
                         {exp.location}
                       </div>
                     </div>
@@ -51,7 +53,7 @@ export default function ExperiencePage({ onOpenResume }) {
                   <ul className="space-y-3 font-sans opacity-90 mb-6">
                     {exp.highlights.map((item, hIdx) => (
                       <li key={hIdx} className="flex items-start gap-3 text-sm leading-relaxed">
-                        <i className="fas fa-check-circle text-[var(--teal)] mt-1"></i>
+                        <CheckCircle className="w-4 h-4 text-[var(--teal)] shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -85,7 +87,7 @@ export default function ExperiencePage({ onOpenResume }) {
                     <ul className="space-y-2 opacity-90 text-sm">
                       {edu.achievements.map((item, aIdx) => (
                         <li key={aIdx} className="flex items-start gap-2">
-                          <i className="fas fa-star text-[var(--mustard)] mt-0.5 text-xs"></i>
+                          <Star className="w-3.5 h-3.5 text-[var(--mustard)] shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
                       ))}
