@@ -193,6 +193,8 @@ export default function HeroSection({ onOpenResume, onOpenProject }) {
                   src={portfolioData.personal.avatar}
                   alt={portfolioData.personal.name}
                   className="w-full h-full object-cover object-top filter contrast-[1.02] brightness-[1.01] group-hover:scale-103 transition-transform duration-500 ease-out"
+                  width="960"
+                  height="1280"
                 />
 
                 {/* Subtle gradient overlay at base */}

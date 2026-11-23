@@ -153,6 +153,8 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
                       className="w-full h-full object-cover grayscale"
                       fetchPriority="high"
                       decoding="async"
+                      width="960"
+                      height="1280"
                     />
                     <div className="absolute inset-0 bg-[var(--mustard)] mix-blend-multiply opacity-30"></div>
                   </div>

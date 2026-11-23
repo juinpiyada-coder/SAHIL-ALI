@@ -5,9 +5,9 @@ export default function CustomCursor() {
   const ringRef = useRef(null);
   const posRef = useRef({ mouseX: 0, mouseY: 0, ringX: 0, ringY: 0 });
   const animationFrameId = useRef(null);
+  const magneticTargetsRef = useRef(new WeakMap());
 
   useEffect(() => {
-    // Only enable on non-touch devices
     if (window.matchMedia('(pointer: coarse)').matches) {
       return;
     }
@@ -21,6 +21,20 @@ export default function CustomCursor() {
       posRef.current.mouseY = e.clientY;
       dot.style.left = `${e.clientX}px`;
       dot.style.top = `${e.clientY}px`;
+
+      const target = e.target.closest('.magnetic');
+      if (target) {
+        let rect = magneticTargetsRef.current.get(target);
+        if (!rect) {
+          rect = target.getBoundingClientRect();
+          magneticTargetsRef.current.set(target, rect);
+          setTimeout(() => magneticTargetsRef.current.delete(target), 100);
+        }
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const strength = 0.25;
+        target.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+      }
     };
 
     const animateRing = () => {
@@ -34,7 +48,6 @@ export default function CustomCursor() {
       animationFrameId.current = requestAnimationFrame(animateRing);
     };
 
-    // Magnetic / Hover Logic using Event Delegation
     const handleMouseOver = (e) => {
       const target = e.target.closest('[data-cursor="hover"], button, a');
       if (target) {
@@ -49,39 +62,25 @@ export default function CustomCursor() {
       }
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseover', handleMouseOver);
-    document.addEventListener('mouseout', handleMouseOut);
-    animationFrameId.current = requestAnimationFrame(animateRing);
-
-    // Magnetic buttons global listener
-    const handleMagneticMove = (e) => {
-      const target = e.target.closest('.magnetic');
-      if (target) {
-        const rect = target.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-        const strength = 0.25;
-        target.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
-      }
-    };
-
     const handleMagneticLeave = (e) => {
       const target = e.target.closest('.magnetic');
       if (target) {
         target.style.transform = '';
+        magneticTargetsRef.current.delete(target);
       }
     };
 
-    document.addEventListener('mousemove', handleMagneticMove);
-    document.addEventListener('mouseout', handleMagneticLeave, true); // Use capture phase for accurate leave events on children
+    document.addEventListener('mousemove', handleMouseMove, { passive: true });
+    document.addEventListener('mouseover', handleMouseOver, { passive: true });
+    document.addEventListener('mouseout', handleMouseOut, { passive: true });
+    document.addEventListener('mouseout', handleMagneticLeave, { passive: true, capture: true });
+    animationFrameId.current = requestAnimationFrame(animateRing);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseover', handleMouseOver);
-      document.removeEventListener('mouseout', handleMouseOut);
-      document.removeEventListener('mousemove', handleMagneticMove);
-      document.removeEventListener('mouseout', handleMagneticLeave, true);
+      document.removeEventListener('mousemove', handleMouseMove, { passive: true });
+      document.removeEventListener('mouseover', handleMouseOver, { passive: true });
+      document.removeEventListener('mouseout', handleMouseOut, { passive: true });
+      document.removeEventListener('mouseout', handleMagneticLeave, { passive: true, capture: true });
       if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
     };
   }, []);

@@ -13,6 +13,8 @@ export default function SkillsPage() {
     { id: 'languages', label: 'Languages', count: skills.languages.length, color: 'bg-[var(--pink)]' }
   ];
 
+  const activeTabData = tabs.find(t => t.id === activeTab);
+
   return (
     <div className="pt-32 pb-20 px-6 md:px-10 bg-[var(--bg)] min-h-screen">
       <div className="max-w-[1400px] mx-auto">
@@ -50,6 +52,13 @@ export default function SkillsPage() {
           })}
         </div>
 
+        {/* Active Category Heading */}
+        {activeTabData && (
+          <h2 className="mb-8 text-center reveal font-display text-3xl text-[var(--ink)]">
+            {activeTabData.label}
+          </h2>
+        )}
+
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
           {skills[activeTab].map((item, idx) => {
@@ -71,7 +80,7 @@ export default function SkillsPage() {
                     ) : null}
                   </div>
                   <div>
-                    <h2 className="font-display text-2xl">{item.name}</h2>
+                    <h3 className="font-display text-2xl">{item.name}</h3>
                     <div className="font-hand text-xl" style={{color: activeColor}}>{item.level}% mastery</div>
                   </div>
                 </div>
