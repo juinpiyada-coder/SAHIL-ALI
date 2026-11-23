@@ -10,23 +10,14 @@
   <meta name="description"
     content="Portfolio of SK Sahil Ali — Software Developer building high-performance backend systems, interactive 3D web experiences, and resilient software architecture." />
 
-  <!-- Preconnect to font origins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Preload critical above-the-fold fonts (Space Grotesk 400/600/700, Archivo Black) -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Archivo+Black&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Archivo+Black&display=swap" media="print" onload="this.media='all'">
-
-  <!-- Preload Caveat (handwriting font) for below-the-fold content -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <!-- Preload self-hosted critical fonts -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/SpaceGrotesk-Variable.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/ArchivoBlack-Regular.woff2" crossorigin>
 
   <!-- Preload LCP image (avatar) -->
   <link rel="preload" as="image" href="/sahilda.jpeg" fetchpriority="high">
-  <link rel="preload" as="image" href="/sahilda.webp" fetchpriority="high" type="image/webp">
 
-  <!-- Removed FontAwesome CDN - using lucide-react + custom SVG icons instead -->
+  <!-- Caveat font loaded via @font-face in CSS (below-the-fold only) -->
 </head>
 
 <body class="bg-[#FCFCFA] text-[#1D1C1A] antialiased selection:bg-[#E3D9CC] selection:text-[#1D1C1A]">

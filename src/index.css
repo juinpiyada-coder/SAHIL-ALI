@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+/* Self-hosted fonts */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/SpaceGrotesk-Variable.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Archivo Black';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ArchivoBlack-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/caveat/v23/Wnz6HAc5bAfYB2Q7ZjYYiAzcPA.woff2') format('woff2');
+}
+
 /* =========================================================================
    THEO WILDER — BRAND DESIGNER (SKETCH & STICKER THEME)
    Ported to SK Sahil Ali Portfolio

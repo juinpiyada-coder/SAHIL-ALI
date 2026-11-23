@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { portfolioData } from '../data/portfolioData';
+import { homeData } from '../data/homeData';
 import { ArrowRight } from 'lucide-react';
 
 export default function HomePage({ onOpenResume, onSelectProject }) {
-  const { personal, projects } = portfolioData;
+  const { personal, projects, metrics } = homeData;
 
   return (
     <div className="bg-[var(--bg)] text-[var(--ink)] font-sans">
@@ -147,16 +147,13 @@ export default function HomePage({ onOpenResume, onSelectProject }) {
               <div className="relative inline-block">
                 <div className="sketch-border-thick bg-[var(--paper)] p-4 pb-16 rotate-[-3deg] transition-transform duration-500 hover:rotate-0">
                   <div className="w-full aspect-[4/5] bg-[var(--cream)] overflow-hidden relative">
-                    <picture>
-                      <source srcSet="/sahilda.webp" type="image/webp" />
-                      <img
-                        src={personal.avatar}
-                        alt={personal.name}
-                        className="w-full h-full object-cover grayscale"
-                        fetchPriority="high"
-                        decoding="async"
-                      />
-                    </picture>
+                    <img
+                      src={personal.avatar}
+                      alt={personal.name}
+                      className="w-full h-full object-cover grayscale"
+                      fetchPriority="high"
+                      decoding="async"
+                    />
                     <div className="absolute inset-0 bg-[var(--mustard)] mix-blend-multiply opacity-30"></div>
                   </div>
                   <div className="absolute bottom-3 left-0 right-0 text-center font-hand text-2xl text-[var(--ink)]">that's me, hi ✦</div>

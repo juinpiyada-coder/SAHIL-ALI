@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
+import { getSkillIcon } from '../data/skillIcons.jsx';
 
 export default function SkillsPage() {
   const [activeTab, setActiveTab] = useState('frontend');
@@ -53,6 +54,7 @@ export default function SkillsPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
           {skills[activeTab].map((item, idx) => {
             const activeColor = tabs.find(t => t.id === activeTab).color.replace('bg-', 'var(--').replace(']', ')');
+            const IconComponent = getSkillIcon(item.name);
             
             return (
               <div
@@ -62,19 +64,11 @@ export default function SkillsPage() {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 shrink-0 bg-[var(--cream)] rounded-full border-2 border-[var(--ink)] flex items-center justify-center p-2">
-                    {item.icon && (
-                      item.icon.startsWith('http') ? (
-                        <img
-                          src={item.icon}
-                          alt={item.name}
-                          className="w-full h-full object-contain filter grayscale contrast-150"
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      ) : (
-                        <span className="text-2xl">{item.icon}</span>
-                      )
-                    )}
+                    {IconComponent ? (
+                      <IconComponent className="w-6 h-6 text-[var(--ink)]" />
+                    ) : item.icon && !item.icon.startsWith('http') ? (
+                      <span className="text-2xl">{item.icon}</span>
+                    ) : null}
                   </div>
                   <div>
                     <h2 className="font-display text-2xl">{item.name}</h2>
